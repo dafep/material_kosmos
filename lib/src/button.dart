@@ -50,7 +50,7 @@ class _ButtonState extends State<Button> {
         shape: RoundedRectangleBorder(
           borderRadius: new BorderRadius.circular(widget.radius ?? 0),
         ),
-        onPressed: () => widget.onPressed,
+        onPressed: () => widget.onPressed(),
         child: new Text(widget.value ?? "Valider", style: TextStyle(color: widget.colorValue ?? Colors.white)),
       )
     );
