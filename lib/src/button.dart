@@ -10,6 +10,7 @@ class Button extends StatefulWidget {
   final List<BoxShadow> shadow;
   final String value;
   final void Function() onPressed;
+  final Color colorValue;
 
   Button({
     this.width,
@@ -21,6 +22,7 @@ class Button extends StatefulWidget {
     this.shadow,
     this.value,
     this.onPressed,
+    this.colorValue,
   });
 
   @override
@@ -49,7 +51,7 @@ class _ButtonState extends State<Button> {
           borderRadius: new BorderRadius.circular(widget.radius ?? 0),
         ),
         onPressed: () => widget.onPressed,
-        child: new Text(widget.value ?? "Valider"),
+        child: new Text(widget.value ?? "Valider", style: TextStyle(color: widget.colorValue ?? Colors.white)),
       )
     );
   }

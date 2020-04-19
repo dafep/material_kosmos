@@ -42,11 +42,14 @@ class _InputKosmosState extends State<InputKosmos> {
         border: Border.all(width: widget.widthBorder, color: widget.borderColor ?? Colors.transparent),
       ),
       child: new Center(
-        child: new TextField(
-          controller: widget.controller,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            hintText: widget.hintText,
+        child: new Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: new TextField(
+            controller: widget.controller,
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: widget.hintText,
+            ),
           ),
         ),
       ),
