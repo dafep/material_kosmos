@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatefulWidget {
+class ButtonKosmos extends StatefulWidget {
   final double width;
   final double height;
   final Color backgroundColor;
@@ -12,7 +12,7 @@ class Button extends StatefulWidget {
   final VoidCallback onPressed;
   final Color colorValue;
 
-  Button({
+  ButtonKosmos({
     this.width,
     this.height,
     this.backgroundColor,
@@ -26,10 +26,10 @@ class Button extends StatefulWidget {
   });
 
   @override
-  _ButtonState createState() => _ButtonState();
+  _ButtonKosmosState createState() => _ButtonKosmosState();
 }
 
-class _ButtonState extends State<Button> {
+class _ButtonKosmosState extends State<ButtonKosmos> {
   double screenWidth;
 
   @override
