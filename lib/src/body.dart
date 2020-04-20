@@ -11,6 +11,8 @@ class _BodyKosmosState extends State<BodyKosmos> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomPadding: false,
       body: new Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
