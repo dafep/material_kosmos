@@ -9,6 +9,8 @@ class InputKosmos extends StatefulWidget {
   final Color borderColor;
   final TextEditingController controller;
   final String hintText;
+  final TextInputType inputType;
+  final bool obscure;
 
   InputKosmos({
     this.width,
@@ -19,6 +21,8 @@ class InputKosmos extends StatefulWidget {
     this.borderColor,
     this.controller,
     this.hintText,
+    this.inputType,
+    this.obscure,
   });
 
   @override
@@ -50,6 +54,8 @@ class _InputKosmosState extends State<InputKosmos> {
               border: InputBorder.none,
               hintText: widget.hintText,
             ),
+            keyboardType: widget.inputType ?? TextInputType.text,
+            obscureText: widget.obscure ?? false,
           ),
         ),
       ),
