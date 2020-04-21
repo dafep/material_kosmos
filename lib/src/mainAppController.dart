@@ -14,6 +14,8 @@ class MainAppControllerKosmos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         body != null ? body : new Container(),
         appBar != null ? appBar : new Container(),
