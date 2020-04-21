@@ -13,11 +13,27 @@ class MainAppControllerKosmos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
       children: <Widget>[
-        appBar != null ? appBar : new Container(),
-        body != null ? body : new Container(),
-        bottomNavigationBar != null ? bottomNavigationBar : new Container(),
+        appBar != null ? Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: appBar,
+        ) : new Container(),
+        body != null ? Positioned(
+          left: 0,
+          top: 0,
+          right: 0,
+          bottom: 0,
+          child: body,
+        ) : new Container(),
+        bottomNavigationBar != null ? Positioned(
+          left: 0,
+          right: 0,
+          bottom: 0,
+          child: bottomNavigationBar,
+        ) : new Container(),
       ],
     );
   }
